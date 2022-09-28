@@ -91,3 +91,12 @@ function reloadPage(){
   upadted.innerHTML = " Updated as of " + parseFloat(responseData.current.last_updated.slice(-6)) % 12 + responseData.current.last_updated.slice(-3) + `<i class="fa-solid ms-1 fa-spin fa-rotate"></i>`
   window.location.reload()
 }
+
+window.addEventListener("load",function(){
+  let loadingScreen = document.querySelector(".loadingScreen")
+  loadingScreen.classList.add("loadingHidden")
+
+  loadingScreen.addEventListener("transitionend",function(){
+    loadingScreen.remove()
+  })
+})
