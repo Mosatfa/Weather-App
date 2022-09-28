@@ -1,0 +1,54 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forecast</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index_style.css">
+</head>
+<body>
+    
+  <nav class="navbar bg-nav py-2 position-fixed top-0 w-100">
+    <div class="container">
+      <a class="navbar-brand text-white fw-bold fs-4">Forecast</a>
+      <div class="col-md-4" role="search">
+        <input class="form-control w-100 searchBar" type="search" placeholder="Find your location" aria-label="Search">
+      </div>
+    </div>
+  </nav>
+
+  <section>
+    <div class="container forecast text-center text-white">
+      <div class="forecastToday">
+        <div class="location mb-3">
+          <h3 class="locationCountry"></h3>
+        </div>
+        <div class="degree position-relative d-flex justify-content-center">
+          <div class="forecast-icon"><img src="" class="today-icon" alt="forecast-icon"></div>
+          <div class="d-flex"><h2 class="forecastTodayDegree"></h2><h2><sup>o</sup>C</h2></div>
+        </div>
+        <div class="day"><p class="todayDate"></p></div>
+        <div class="stateToday mb-2"></div>
+        <div class="upadted mb-2"></div>
+        <div>
+          <div class="d-flex justify-content-center gap-4 ">
+            <p class="humidity"></p>
+            <p class="wind"></p>
+            <p class="visibility"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container text-white forecastNextDay">
+      <div class="text-white mb-4"><h2 class="mb-4">Daily</h2></div>
+      <div class="row cards g-3"></div>
+    </div>
+  </section>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/mine.js"></script>
+</body>
+</html>
