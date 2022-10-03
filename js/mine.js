@@ -32,15 +32,15 @@ getWeather()
 function displayTodayForecast(){
     imgs = responseData.current.condition.icon.split("/")[5]
     if(imgs === "night"){
-      // document.body.style.backgroundImage = "url('./imges/wallpaperflare.com_wallpaper\ \(12\).jpg')"
-      document.body.style.backgroundColor = "#454579"
-      // searchBar.style.backgroundColor = "transparent"
-      // searchBar.style.color = "#fff";
+      document.body.style.backgroundImage = "url('./imges/wallpaperflare.com_wallpaper\ \(12\).jpg')"
+      // document.body.style.backgroundColor = "#454579"
+      searchBar.style.backgroundColor = "transparent"
+      searchBar.style.color = "#fff";
     }else{
-      // document.body.style.backgroundImage = "url('./imges/wallpaperflare.com_wallpaper\ \(8\).jpg')";
-      document.body.style.backgroundColor = "#8DB9F2"
-      // searchBar.style.backgroundColor = "#fff";
-      // searchBar.style.color = "#212529";
+      document.body.style.backgroundImage = "url('./imges/wallpaperflare.com_wallpaper\ \(8\).jpg')";
+      //document.body.style.backgroundColor = "#8DB9F2"
+      searchBar.style.backgroundColor = "#fff";
+      searchBar.style.color = "#212529";
     }
     
     
@@ -105,19 +105,19 @@ window.addEventListener("load",function(){
   })
 })
 
-window.addEventListener("scroll",function(){
-  if(this.scrollY >= 35)
-  {
-    // document.body.style.backgroundColor = "black"
-    document.body.style.backgroundColor = "#000000"
+// window.addEventListener("scroll",function(){
+//   if(this.scrollY >= 35)
+//   {
+//     // document.body.style.backgroundColor = "black"
+//     document.body.style.backgroundColor = "#000000"
 
-  }else{
-    document.body.style.transition = "0.5s"
+//   }else{
+//     document.body.style.transition = "0.5s"
 
-    if(imgs === "night"){
-      document.body.style.backgroundColor = "#454579"
-    }else{
-      document.body.style.backgroundColor = "#8DB9F2"
-    }
-  }
-})
+//     if(imgs === "night"){
+//       document.body.style.backgroundColor = "#454579"
+//     }else{
+//       document.body.style.backgroundColor = "#8DB9F2"
+//     }
+//   }
+// })
