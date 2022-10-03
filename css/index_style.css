@@ -4,16 +4,15 @@
     box-sizing: border-box;
 }
 
-/* body{
+body{
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-} */
+}
 
 .bg-nav{
     backdrop-filter: blur(10px);
-    
 }
 
 .forecast{
@@ -59,9 +58,9 @@ i{
 
 .searchBar{
     border: 1px solid rgba(255, 255, 255, 0.2);
-    background-color: #fff;
+/*     background-color: #fff;
     color: #212529;
-    color: #000000;
+    color: #000000; */
 }
 
 .loadingScreen{
