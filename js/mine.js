@@ -9,6 +9,8 @@ let locationCountry = document.querySelector(".locationCountry")
     visibility = document.querySelector(".visibility")
     searchBar = document.querySelector(".searchBar")
     reloadicon = document.querySelector(".reloadicon")
+    imgs = '';
+
 
   
 
@@ -28,6 +30,20 @@ getWeather()
 
 
 function displayTodayForecast(){
+    imgs = responseData.current.condition.icon.split("/")[5]
+    if(imgs === "night"){
+      // document.body.style.backgroundImage = "url('./imges/wallpaperflare.com_wallpaper\ \(12\).jpg')"
+      document.body.style.backgroundColor = "#454579"
+      // searchBar.style.backgroundColor = "transparent"
+      // searchBar.style.color = "#fff";
+    }else{
+      // document.body.style.backgroundImage = "url('./imges/wallpaperflare.com_wallpaper\ \(8\).jpg')";
+      document.body.style.backgroundColor = "#8DB9F2"
+      // searchBar.style.backgroundColor = "#fff";
+      // searchBar.style.color = "#212529";
+    }
+    
+    
     locationCountry.innerHTML = `${responseData.location.name}, ${responseData.location.country}`
     todayIcon.setAttribute("src" , `https:${responseData.current.condition.icon}`)
     forecastTodayDegree.innerHTML = responseData.current.temp_c
@@ -37,18 +53,6 @@ function displayTodayForecast(){
     humidity.innerHTML = `Humidity ${responseData.current.humidity}%`
     wind.innerHTML = `Wind ${responseData.current.wind_kph} km/h`
     visibility.innerHTML = `Visibility ${responseData.current.vis_km} km/h`
-
-    let imgs = responseData.current.condition.icon.split("/")[5]
-    if(imgs === "night"){
-      document.body.style.backgroundImage = "url('./imges/wallpaperflare.com_wallpaper\ \(12\).jpg')"
-      searchBar.style.backgroundColor = "transparent"
-      searchBar.style.color = "#fff";
-    }
-    else{
-      document.body.style.backgroundImage = "url('./imges/wallpaperflare.com_wallpaper\ \(8\).jpg')";
-      searchBar.style.backgroundColor = "#fff";
-      searchBar.style.color = "#212529";
-    }
 }
 
 
@@ -99,4 +103,21 @@ window.addEventListener("load",function(){
   loadingScreen.addEventListener("transitionend",function(){
     loadingScreen.remove()
   })
+})
+
+window.addEventListener("scroll",function(){
+  if(this.scrollY >= 35)
+  {
+    // document.body.style.backgroundColor = "black"
+    document.body.style.backgroundColor = "#000000"
+
+  }else{
+    document.body.style.transition = "0.5s"
+
+    if(imgs === "night"){
+      document.body.style.backgroundColor = "#454579"
+    }else{
+      document.body.style.backgroundColor = "#8DB9F2"
+    }
+  }
 })
