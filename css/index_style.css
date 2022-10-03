@@ -58,9 +58,10 @@ i{
 
 .searchBar{
     border: 1px solid rgba(255, 255, 255, 0.2);
-/*     background-color: #fff;
+/*  background-color: #fff;
     color: #212529;
     color: #000000; */
+    box-shadow: 0 0 0 0 !important;
 }
 
 .loadingScreen{
